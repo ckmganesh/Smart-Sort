@@ -1,0 +1,85 @@
+<head>
+    <title>Dashboard Analytics</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('https://i.ibb.co/zVLb3X6/Dark-grungy-background-or-texture.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light text-light bg-dark">
+        <a class="navbar-brand">TrashBoard</a>
+        <form class="form-inline">
+          <button class="btn btn-outline-success m-2 my-sm-0" type="submit">Logout</button>
+        </form>
+      </nav>
+    <div class="container mw-100" style="height: 1000;">
+        <% source=1; %>
+        <div class="mx-auto m-3 p-2 font-weight-bold text-white" style="width: 400px; text-align: center; font-size: 35px;">
+            Trash Data
+        </div>
+        <div class="row mh-100">
+            <div class="col-md-8 p-5 flex-grow-1 d-flex flex-column">
+                <table class="table table-dark">
+                    <caption>Trash Classification data</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Class</th>
+                        <th scope="col">Timestamp</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col">Probability</th>
+                        <th scope="col">Image</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <%
+                        if(dataa.length!=0){
+                        var i=1;
+                        dataa.forEach(function(data){
+                        %>
+                        <tr>
+                            <% src=data["image"]; %>
+                            <td><%=i; %></td>
+                            <td><%=data["Class"] %></td>
+                            <td><%=data["Timestamp"] %></td>
+                            <td><%=data["Weight"] %></td>
+                            <td><%=data["Probability"] %></td>
+                            <td><button type="button" class="btn btn-link" onclick="myFunction('<%=src;  %>')">View</button></td>
+                        </tr>
+                        <%  i++; }) %>
+                        <% } else{ %>
+                            <tr>
+                                <td colspan="5">No Data Found</td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="col-md-4 p-5" style="text-align: center;">
+                <div style="margin: auto;
+                width: 50%;
+                height: 240;
+                border: 3px solid green;
+                padding: 10px;" class="bg-dark">
+                    <img id="myimage" src="https://i.ibb.co/tsF3gbJ/noselect.png" height="200" width="200" alt="Missing Image" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction(x)
+        {
+            console.log(x);
+            document.getElementById("myimage").src="data:image/jpg;base64,"+x;
+            src=0;
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
