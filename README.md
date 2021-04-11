@@ -27,7 +27,7 @@ Frontend UI to see details about the activity of the bin
 Camera which captures and sends the image to the cloud
 <br><br>
 <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/477/245/datas/original.jpeg" height="400" width="600">
-Raspberry pie connections
+Raspberry pi connections
 <br><br>
 
 ## Contributors
