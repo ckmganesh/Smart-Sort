@@ -17,17 +17,17 @@ Automate Waste Classification using IOT & ML
 ## Prototype and Output
 
 <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/477/088/datas/original.jpg" height="400" width="600">
-Prototype of the Bin
+### Prototype of the Bin
 <br>
 <br>
 <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/477/097/datas/original.png" height="400" width="600">
-Frontend UI to see details about the activity of the bin
+### Frontend UI to see details about the activity of the bin
 <br><br>
 <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/477/248/datas/original.jpeg" height="400" width="200">
-Camera which captures and sends the image to the cloud
+### Camera which captures and sends the image to the cloud
 <br><br>
 <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/477/245/datas/original.jpeg" height="400" width="600">
-Raspberry pi connections
+### Raspberry pi connections
 <br><br>
 
 ## Contributors
